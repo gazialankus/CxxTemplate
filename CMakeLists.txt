@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.10.0)
 
 project(CxxTemplate
   VERSION 0.1.0.0
+  LANGUAGES C CXX
   DESCRIPTION "A project containing the essentials for other projects"
-  HOMEPAGE_URL "https://github.com/AronRubin"
 )
 set(CxxTemplate_VENDOR "Aron Rubin")
 set(PROJECT_VENDOR "${CxxTemplate_VENDOR}")
