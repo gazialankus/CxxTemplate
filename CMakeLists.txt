@@ -17,10 +17,13 @@ set(CMAKE_C_STANDARD 11)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
 
+enable_testing()
 
 if(POLICY CMP0074)
   cmake_policy(SET CMP0074 NEW)
 endif()
+
+add_subdirectory(tests)
 
 find_package(GTest)
 if(GTEST_FOUND)
