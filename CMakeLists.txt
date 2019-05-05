@@ -17,13 +17,11 @@ set(CMAKE_C_STANDARD 11)
 
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
 
-enable_testing()
 
 if(POLICY CMP0074)
   cmake_policy(SET CMP0074 NEW)
 endif()
 
-add_subdirectory(tests)
 
 find_package(GTest)
 if(GTEST_FOUND)
@@ -32,6 +30,9 @@ endif()
 if(GTest_FOUND)
 include(GoogleTest)
 endif()
+
+enable_testing()
+add_subdirectory(tests)
 
 include(CheckIncludeFiles)
 CHECK_INCLUDE_FILES(sys/prctl.h HAVE_SYS_PRCTL_H)

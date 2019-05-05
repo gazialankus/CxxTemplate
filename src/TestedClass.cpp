@@ -7,6 +7,10 @@
 
 #include "TestedClass.h"
 
+int TestedClass::add(int a, int b) {
+	return a + b;
+}
+
 TestedClass::TestedClass() {
 	// TODO Auto-generated constructor stub
 

@@ -12,6 +12,7 @@ class TestedClass {
 public:
 	TestedClass();
 	virtual ~TestedClass();
+	int add(int a, int b);
 };
 
 #endif /* SRC_TESTEDCLASS_H_ */

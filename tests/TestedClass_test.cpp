@@ -34,9 +34,9 @@ class TestedClassTest : public ::testing::Test {
 };
 
 // Tests that the Foo::Bar() method does Abc.
-TEST_F(TestedClassTest, CanRunTests) {
+TEST_F(TestedClassTest, CanAdd) {
 	TestedClass tc;
-	EXPECT_EQ(0, 0);
+	EXPECT_EQ(5, tc.add(2, 3));
 }
 
 // Tests that Foo does Xyz.

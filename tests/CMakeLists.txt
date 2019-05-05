@@ -1,3 +1,10 @@
-include(AddGoogleTest) 
-add_executable(TestedClass_test TestedClass_test.cpp)
-add_gtest(TestedClass_test)
+include(GoogleTest)
+
+add_executable(tests TestedClass_test.cpp ../src/TestedClass.cpp)
+
+target_link_libraries(tests GTest::GTest)
+
+gtest_discover_tests(tests)
+
+
+
