@@ -42,6 +42,7 @@ add_executable(CxxTemplate
   src/CxxTemplate.cpp  
   src/ANewClass.cpp
   src/SumFunc.cpp
+  src/LinearMotion1D.cpp
 )
 
 target_link_libraries(CxxTemplate

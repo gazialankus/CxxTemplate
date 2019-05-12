@@ -14,7 +14,7 @@ CxxApplication::CxxApplication( int argc, char *argv[] ) {
   std::cout << "Hello CMake." << std::endl;
   ANewClass anew;
   anew.run();
-  printSum(3, 4);
+  std::cout << sum(3, 4) << std::endl;
 }
 
 CxxApplication::~CxxApplication() {

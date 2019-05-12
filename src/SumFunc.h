@@ -8,6 +8,6 @@
 #ifndef SRC_SUMFUNC_H_
 #define SRC_SUMFUNC_H_
 
-void printSum(int a, int b);
+int sum(int a, int b);
 
 #endif /* SRC_SUMFUNC_H_ */

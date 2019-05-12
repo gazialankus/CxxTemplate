@@ -8,7 +8,7 @@
 #include "SumFunc.h"
 #include <iostream>
 
-void printSum(int a, int b) {
-	std::cout << a + b << std::endl;
+int sum(int a, int b) {
+	return a + b;
 }
 
