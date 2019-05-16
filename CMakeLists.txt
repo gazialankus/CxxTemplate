@@ -43,6 +43,7 @@ add_executable(CxxTemplate
   src/ANewClass.cpp
   src/SumFunc.cpp
   src/LinearMotion1D.cpp
+  src/SpeedCalculator.cpp
 )
 
 target_link_libraries(CxxTemplate
