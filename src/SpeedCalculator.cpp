@@ -7,6 +7,7 @@
 
 #include "SpeedCalculator.h"
 #include <stdlib.h>
+#include <time.h>
 #include <iostream>
 
 void SpeedCalculator::initializeData(int numEntries) {
@@ -14,24 +15,27 @@ void SpeedCalculator::initializeData(int numEntries) {
 	positions = new double[numEntries];
 	timesInSeconds = new double[numEntries];
 
+	srand(time(NULL));
+
 	for (int i = 0; i < numEntries; ++i) {
-		positions[i] = rand() * 100;
 		if (i == 0) {
 			timesInSeconds[i] = 0.0;
+			positions[i] = 0.0;
 		} else {
-			timesInSeconds[i] = timesInSeconds[i - 1] + rand();
+			positions[i] = positions[i - 1] + (rand() % 500);
+			timesInSeconds[i] = timesInSeconds[i - 1] + ((rand() % 10) + 1);
 		}
 	}
 }
 
 void SpeedCalculator::calculateAndPrintSpeedData() {
-	double *speeds;
+	double *speeds = new double[numEntries - 1];
 	double maxSpeed = 0;
 	double minSpeed = 0;
 	double speedLimit = 100;
 	double limitCrossDuration = 0;
 
-	for (int i = 0; i < numEntries; ++i) {
+	for (int i = 0; i < numEntries - 1; ++i) {
 		double dt = timesInSeconds[i + 1] - timesInSeconds[i];
 		double speed = (positions[i + 1] - positions[i]) / dt;
 
@@ -52,6 +56,7 @@ void SpeedCalculator::calculateAndPrintSpeedData() {
 
 	std::cout << "Max speed: " << maxSpeed << std::endl;
 	std::cout << "Min speed: " << minSpeed << std::endl;
+	std::cout << "Total duration: " << timesInSeconds[numEntries - 1] - timesInSeconds[0] << " seconds" << std::endl;
 	std::cout << "Crossed the speed limit for " << limitCrossDuration << " seconds"<< std::endl;
 	delete[] speeds;
 }
