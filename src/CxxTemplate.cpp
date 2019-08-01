@@ -1,5 +1,6 @@
 ﻿
 #include "CxxTemplate.h"
+#include "ANewClass.h"
 
 #include <string>
 #include <iostream>
@@ -10,6 +11,8 @@ namespace cxxt {
 
 CxxApplication::CxxApplication( int argc, char *argv[] ) {
   std::cout << "Hello CMake." << std::endl;
+  ::ANewClass anew;
+  anew.run();
 }
 
 CxxApplication::~CxxApplication() {
