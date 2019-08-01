@@ -1,6 +1,7 @@
 ﻿
 #include "CxxTemplate.h"
 #include "ANewClass.h"
+#include "SumFunc.h"
 
 #include <string>
 #include <iostream>
@@ -13,6 +14,7 @@ CxxApplication::CxxApplication( int argc, char *argv[] ) {
   std::cout << "Hello CMake." << std::endl;
   ::ANewClass anew;
   anew.run();
+  std::cout << sum(3, 4) << std::endl;
 }
 
 CxxApplication::~CxxApplication() {

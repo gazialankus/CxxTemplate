@@ -38,6 +38,7 @@ find_package(Threads REQUIRED)
 add_executable(CxxTemplate
   src/CxxTemplate.cpp  
   src/ANewClass.cpp
+  src/SumFunc.cpp
 )
 
 target_link_libraries(CxxTemplate
