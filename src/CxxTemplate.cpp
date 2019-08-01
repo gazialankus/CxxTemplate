@@ -27,5 +27,11 @@ CxxApplication::~CxxApplication() {
 int main( int argc, char *argv[] ) {
   cxxt::CxxApplication app( argc, argv );
 
+  int i = 1, t = 0;
+  do {
+    t += i++;
+  } while (i <= 3);
+  std::cout << t << std::endl;
+
   return 0;
 }
