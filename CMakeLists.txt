@@ -29,6 +29,8 @@ endif()
 if(GTest_FOUND)
 include(GoogleTest)
 endif()
+enable_testing()
+add_subdirectory(tests)
 
 include(CheckIncludeFiles)
 CHECK_INCLUDE_FILES(sys/prctl.h HAVE_SYS_PRCTL_H)
